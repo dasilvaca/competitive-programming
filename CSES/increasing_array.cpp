@@ -14,9 +14,11 @@ int main() {
   for (int i = 0; i < n - 1; i++) {
     cin >> act;
     if (prev > act)
+      //* I make the array a non descendant one, and store the moves.
       moves += (ll)((ll)prev - (ll)act);
     else
-      prev = act;
+      prev = act;  //* I increase the previous biggest element if I read another
+                   //* bigger
   }
   cout << moves << '\n';
 }
